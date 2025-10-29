@@ -1,12 +1,16 @@
-import { Controller, Get } from '@nestjs/common';
-import { ApiService } from './api.service';
+import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
+import { TextDto } from '@shared/dto';
+import { ParseTextPipe } from '@shared/pipe';
+import { TranslateService } from '@shared/service';
 
 @Controller()
 export class ApiController {
-  constructor(private readonly apiService: ApiService) {}
+  constructor(private readonly translateService: TranslateService) {}
 
-  @Get()
-  getHello(): string {
-    return this.apiService.getHello();
+  @Post('translate')
+  @HttpCode(HttpStatus.OK)
+  async getHello(@Body(ParseTextPipe) text: TextDto): Promise<TextDto> {
+    console.log(text);
+    return await this.translateService.translate(text);
   }
 }

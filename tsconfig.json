@@ -18,12 +18,9 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@shared/shared": [
-        "libs/shared/src"
-      ],
-      "@shared/shared/*": [
-        "libs/shared/src/*"
-      ]
+      "@shared/service": ["libs/shared/service"],
+      "@shared/pipe": ["libs/shared/pipe"],
+      "@shared/dto": ["libs/shared/dto"]
     }
   }
 }
