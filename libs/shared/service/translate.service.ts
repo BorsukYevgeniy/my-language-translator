@@ -7,14 +7,22 @@ import { consonantLetters, finalSoftLetters } from './constants/cosntants';
 export class TranslateService {
   private async replace(str: string) {
     let res = str.replaceAll('Ае', 'Ӕ');
-
     res = res.replaceAll('ае', 'ӕ');
 
     res = res.replaceAll('Дж', 'Ԫ');
     res = res.replaceAll('дж', 'ԫ');
 
+    res = res.replaceAll('Джмі', 'Ђмі');
+    res = res.replaceAll('джмі', 'ђмі');
+
+    res = res.replaceAll('Джі', 'Ђі');
+    res = res.replaceAll('Джі', 'Ђі');
+
     res = res.replaceAll('Дзьо', 'Ԇӏ');
     res = res.replaceAll('дзьо', 'ԇӏ');
+
+    res = res.replaceAll('Дзв', 'ꚃ');
+    res = res.replaceAll('дзв', 'ꚃ');
 
     res = res.replaceAll('Дз', 'Ꚉ');
     res = res.replaceAll('дз', 'ꚉ');
@@ -33,6 +41,9 @@ export class TranslateService {
 
     res = res.replaceAll('Фт', 'Ѳ');
     res = res.replaceAll('фт', 'ѳ');
+
+    res = res.replaceAll('Ан', 'Ѧ');
+    res = res.replaceAll('ан', 'ѧ');
 
     res = res.replaceAll('Ян', 'Ѩ');
     res = res.replaceAll('ян', 'ѩ');
@@ -67,22 +78,6 @@ export class TranslateService {
     res = res.replaceAll('нь', 'љ');
     res = res.replaceAll('нь', 'љ');
 
-    res = res.replaceAll('Кі', 'Ќі');
-    res = res.replaceAll('кі', 'ќі');
-
-    res = res.replaceAll('Гі', 'Ѓі');
-    res = res.replaceAll('Гі', 'ѓі');
-
-    res = res.replaceAll('Зі', 'З́і');
-    res = res.replaceAll('зі', 'з́і');
-    res = res.replaceAll('Зь', 'З́ь');
-    res = res.replaceAll('зь', 'з́ь');
-
-    res = res.replaceAll('Сі', 'С́і');
-    res = res.replaceAll('сі', 'с́і');
-    res = res.replaceAll('Сь', 'С́ь');
-    res = res.replaceAll('сь', 'с́ь');
-
     res = res.replaceAll('Ст', 'Ѕ');
     res = res.replaceAll('ст', 'ѕ');
 
@@ -104,8 +99,8 @@ export class TranslateService {
     res = res.replaceAll('Ії', 'Ꙓ');
     res = res.replaceAll('ії', 'ꙓ');
 
-    res = res.replaceAll('Йо', 'Ј');
-    res = res.replaceAll('йо', 'ј');
+    res = res.replaceAll('Йо', 'Ё');
+    res = res.replaceAll('йо', 'ё');
 
     res = res.replaceAll('Ом', 'Ѡм');
     res = res.replaceAll('ом', 'ѡм');
@@ -140,8 +135,8 @@ export class TranslateService {
     res = res.replaceAll('Ть', 'ፔ');
     res = res.replaceAll('ть', 'ፔ');
 
-    res = res.replaceAll('Дьо', 'Дӏ');
-    res = res.replaceAll('дьо', 'дӏ');
+    res = res.replaceAll('Дьо', 'Ԁӏ');
+    res = res.replaceAll('дьо', 'ԁӏ');
 
     res = res.replaceAll('Зьо', 'Зӏ');
     res = res.replaceAll('зьо', 'зӏ');
@@ -154,6 +149,38 @@ export class TranslateService {
 
     res = res.replaceAll('Рьо', 'Рӏ');
     res = res.replaceAll('рьо', 'рӏ');
+
+    res = res.replaceAll('Ин', 'Ꙟ');
+    res = res.replaceAll('ин', 'ꙟ');
+
+    res = res.replaceAll('Ува', 'Ўә ');
+    res = res.replaceAll('ува', 'ўә');
+
+    res = res.replaceAll('Шва', 'Ꚗә');
+    res = res.replaceAll('шва', 'ꚗә');
+
+    res = res.replaceAll('Цв', 'Ꚏә');
+    res = res.replaceAll('цв', 'ꚏә');
+
+    res = res.replaceAll('Шв', 'Ꚗ');
+    res = res.replaceAll('шв', 'ꚗ');
+
+    res = res.replaceAll('Цв', 'Ꚏ');
+    res = res.replaceAll('цв', 'ꚏ');
+
+    res = res.replaceAll('Ва', 'Вә');
+    res = res.replaceAll('ва', 'вә');
+
+    res = res.replaceAll('Ув', 'Ў');
+    res = res.replaceAll('ув', 'ў');
+
+    res = res.replaceAll('Чж', 'Џ');
+    res = res.replaceAll('чж', 'џ');
+
+    res = res.replaceAll('Чі', 'Ћі');
+    res = res.replaceAll('чі', 'ћі');
+    res = res.replaceAll('Чь', 'Ћь');
+    res = res.replaceAll('чь', 'ћь');
 
     return res;
   }
@@ -189,7 +216,13 @@ export class TranslateService {
 
         words[i] = wordArr.join('');
       } else if (words[i][words[i].length - 1] === 'й') {
-        words[i] = words[i].concat('ъ');
+        const wordArr = words[i].split('');
+
+        wordArr.pop();
+        wordArr.push('ј');
+        wordArr.push('ъ');
+
+        words[i] = wordArr.join('');
       }
     }
 
