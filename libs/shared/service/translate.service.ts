@@ -234,6 +234,51 @@ export class TranslateService {
     res = res.replaceAll('Тч', 'Ꚓ');
     res = res.replaceAll('тч', 'ꚓ');
 
+    res = res.replaceAll('Тв', 'Ꚍ');
+    res = res.replaceAll('тв', 'ꚍ');
+
+    res = res.replaceAll('Дв', 'Ꚁ');
+    res = res.replaceAll('дв', 'ꚁ');
+
+    res = res.replaceAll('Тс', 'Ꚑ');
+    res = res.replaceAll('тс', 'ꚑ');
+
+    res = res.replaceAll('Ив', 'Ѵ');
+    res = res.replaceAll('ив', 'ѵ');
+
+    res = res.replaceAll('Дво', 'Двꙭ ');
+    res = res.replaceAll('дво', 'двꙭ ');
+
+    res = res.replaceAll('Обоє', 'Ꙭбє');
+    res = res.replaceAll('обоє', 'ꙭбє');
+
+    res = res.replaceAll('Окр', 'Ꚛкр');
+    res = res.replaceAll('окр', 'ꚛкр');
+
+    res = res.replaceAll('Охр', 'Ꚛхр');
+    res = res.replaceAll('охр', 'ꚛхр');
+
+    res = res.replaceAll('Ог', 'Ѻ');
+    res = res.replaceAll('ог', 'ѻ');
+
+    res = res.replaceAll('Багато', 'Багтꙮ');
+    res = res.replaceAll('багато', 'багтꙮ');
+
+    res = res.replaceAll('Много', 'Мнꙮг');
+    res = res.replaceAll('много', 'мнꙮг');
+
+    res = res.replaceAll('Оч', 'Ꙫ');
+    res = res.replaceAll('оч', 'ꙫ');
+
+    res = res.replaceAll('Ок', 'Ꙩ');
+    res = res.replaceAll('ок', 'ꙩ');
+
+    res = res.replaceAll('Очо', 'Ꚙч');
+    res = res.replaceAll('очо', 'ꚙч');
+
+    res = res.replaceAll('Оі', 'Ꙕ');
+    res = res.replaceAll('оі', 'ꙕ');
+
     return res;
   }
 
