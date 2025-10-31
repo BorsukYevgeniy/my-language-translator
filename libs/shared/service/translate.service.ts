@@ -19,7 +19,7 @@ export class TranslateService {
     res = res.replaceAll('джмі', 'ђмі');
 
     res = res.replaceAll('Джі', 'Ђі');
-    res = res.replaceAll('Джі', 'Ђі');
+    res = res.replaceAll('джі', 'ђі');
 
     res = res.replaceAll('Дзе', 'Ꙃ');
     res = res.replaceAll('дзе', 'ꙃ');
@@ -30,11 +30,11 @@ export class TranslateService {
     res = res.replaceAll('Дзю', 'Ԇю');
     res = res.replaceAll('дзю', 'ԇю');
 
+    res = res.replaceAll('Дзя', 'Ԇя');
+    res = res.replaceAll('дзя', 'ԇя');
+
     res = res.replaceAll('Дзі', 'Ԇі');
     res = res.replaceAll('дзі', 'ԇі');
-
-    res = res.replaceAll('Дзьо', 'Ԇӏ');
-    res = res.replaceAll('дзьо', 'ԇӏ');
 
     res = res.replaceAll('Дзв', 'ꚃ');
     res = res.replaceAll('дзв', 'ꚃ');
@@ -89,9 +89,6 @@ export class TranslateService {
 
     res = res.replaceAll('Нь', 'Њ');
     res = res.replaceAll('нь', 'њ');
-
-    res = res.replaceAll('нь', 'љ');
-    res = res.replaceAll('нь', 'љ');
 
     res = res.replaceAll('Ст', 'Ѕ');
     res = res.replaceAll('ст', 'ѕ');
@@ -150,7 +147,23 @@ export class TranslateService {
     res = res.replaceAll('Ді', 'Ԁ');
     res = res.replaceAll('ді', 'ԁ');
 
+    res = res.replaceAll('Лі', 'Ԉ');
+    res = res.replaceAll('лі', 'ԉ');
+
+    res = res.replaceAll('Ні', 'Ԋ');
+    res = res.replaceAll('ні', 'ԋ');
+
+    res = res.replaceAll('Сі', 'Ԍ');
+    res = res.replaceAll('сі', 'ԍ');
+
+    res = res.replaceAll('Ті', 'Ԏ');
+    res = res.replaceAll('Ті', 'ԏ');
+
+    res = res.replaceAll('Зі', 'Ԅ');
+    res = res.replaceAll('зі', 'ԅ');
+
     res = res.replaceAll('Дь', 'Ԃ');
+    res = res.replaceAll('Зь', 'Ԅ');
 
     res = res.replaceAll('Тьо', 'ፔӏ');
     res = res.replaceAll('тьо', 'ፔӏ');
@@ -205,6 +218,9 @@ export class TranslateService {
     res = res.replaceAll('Чь', 'Ћь');
     res = res.replaceAll('чь', 'ћь');
 
+    res = res.replaceAll('Обоє', 'Ꙭбє');
+    res = res.replaceAll('обоє', 'ꙭбє');
+
     res = res.replaceAll('Оє', 'Ө');
     res = res.replaceAll('оє', 'ө');
 
@@ -231,9 +247,6 @@ export class TranslateService {
     res = res.replaceAll('Зм', 'Ꙁ');
     res = res.replaceAll('зм', 'ꙁ');
 
-    res = res.replaceAll('Дзе', 'Ꙁ');
-    res = res.replaceAll('дзе', 'ꙁ');
-
     res = res.replaceAll('Тч', 'Ꚓ');
     res = res.replaceAll('тч', 'ꚓ');
 
@@ -246,14 +259,11 @@ export class TranslateService {
     res = res.replaceAll('Тс', 'Ꚑ');
     res = res.replaceAll('тс', 'ꚑ');
 
-    res = res.replaceAll('Ив', 'Ѵ');
-    res = res.replaceAll('ив', 'ѵ');
+    res = res.replaceAll('Ив', 'Ѵв');
+    res = res.replaceAll('ив', 'ѵв');
 
     res = res.replaceAll('Дво', 'Двꙭ ');
     res = res.replaceAll('дво', 'двꙭ ');
-
-    res = res.replaceAll('Обоє', 'Ꙭбє');
-    res = res.replaceAll('обоє', 'ꙭбє');
 
     res = res.replaceAll('Окр', 'Ꚛкр');
     res = res.replaceAll('окр', 'ꚛкр');
@@ -314,6 +324,12 @@ export class TranslateService {
 
     res = res.replaceAll('Ойо', 'Ӧ̄');
     res = res.replaceAll('Ойо', 'ӧ̄');
+
+    res = res.replaceAll('Зжв', 'Ꚅ̆');
+    res = res.replaceAll('зжв', 'ꚅ̆');
+
+    res = res.replaceAll('Зж', 'Ꚅ');
+    res = res.replaceAll('зж', 'ꚅ');
 
     return res;
   }
