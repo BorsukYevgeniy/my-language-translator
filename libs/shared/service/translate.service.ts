@@ -331,6 +331,30 @@ export class TranslateService {
     res = res.replaceAll('Зж', 'Ꚅ');
     res = res.replaceAll('зж', 'ꚅ');
 
+    res = res.replaceAll('Ий', 'Й');
+    res = res.replaceAll('ий', 'й');
+
+    res = res.replaceAll('Ій', 'Ҋ');
+    res = res.replaceAll('ій', 'ҋ');
+
+    res = res.replaceAll('Иј', 'Й');
+    res = res.replaceAll('иј', 'й');
+
+    res = res.replaceAll('Іј', 'Ҋ');
+    res = res.replaceAll('іј', 'ҋ');
+    
+    res = res.replaceAll('Єю', 'Є̈');
+    res = res.replaceAll('єю', 'є̈');
+    
+    res = res.replaceAll('Ев', 'Эв');
+    res = res.replaceAll('ев', 'эв');
+
+    res = res.replaceAll('Єв', 'Ӭв');
+    res = res.replaceAll('єв', 'ӭв');
+
+    res = res.replaceAll('Єєв', 'Ӭ̄в');
+    res = res.replaceAll('єєв', 'ӭ̄в');
+    
     return res;
   }
 
