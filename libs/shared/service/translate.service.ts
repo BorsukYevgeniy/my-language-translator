@@ -149,6 +149,9 @@ export class TranslateService {
     res = res.replaceAll('жив', 'Жы̆');
     res = res.replaceAll('шив', 'Шы̆');
 
+    res = res.replaceAll('Івл', ' Ы̆л');
+    res = res.replaceAll('івл', ' Ы̆л');
+
     res = res.replaceAll(/[бпвмф]е/giu, (match) => match[0] + 'ѣ');
     res = res.replaceAll(/[бпвмф]є/giu, (match) => match[0] + 'ꙓ');
     res = res.replaceAll(/[бпвмф]і/giu, (match) => match[0] + 'ꙇ');
