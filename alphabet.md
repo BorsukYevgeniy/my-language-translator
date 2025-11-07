@@ -1,10 +1,11 @@
 # Алфавіт / Алфәвꙇтꙏ
 
+Для коректного відображення використовуйте шрифт Noto Sans
+
 ## 141 Буква / 141 Буква:
-
-<div style= "font-family: 'Noto Sans SemiBold">
-
-## новий алфвіт
+  
+<div style= "@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+font-family: 'Noto Sans SemiBold' ">
 
 1. А а (А)
 2. А̄ а̄ (А подовжене)
