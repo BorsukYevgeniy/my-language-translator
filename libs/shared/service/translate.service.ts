@@ -57,6 +57,9 @@ export class TranslateService {
     res = res.replaceAll('Фт', 'Ѳ');
     res = res.replaceAll('фт', 'ѳ');
 
+    res = res.replaceAll('Іо', 'Ҩ');
+    res = res.replaceAll('іо', 'ҩ');
+
     res = res.replaceAll('Ан', 'Ѧ');
     res = res.replaceAll('ан', 'ѧ');
 
@@ -167,6 +170,9 @@ export class TranslateService {
     res = res.replaceAll(/и[бпвмф]/gu, (match) => 'ꙑ' + match[1]);
     res = res.replaceAll(/і[бпвмф]/gu, (match) => 'ꙇ' + match[1]);
 
+    res = res.replaceAll('Иил', 'Ы̄л');
+    res = res.replaceAll('иил', 'ы̄л');
+
     res = res.replaceAll('Ил', 'Ыл');
     res = res.replaceAll('ил', 'ыл');
 
@@ -221,6 +227,9 @@ export class TranslateService {
     res = res.replaceAll('Ва', 'Вә');
     res = res.replaceAll('ва', 'вә');
 
+    res = res.replaceAll('Аав', 'Ә̄');
+    res = res.replaceAll('Аав', 'ә̄');
+
     res = res.replaceAll('Ав', 'Әв');
     res = res.replaceAll('ав', 'әв');
 
@@ -237,6 +246,9 @@ export class TranslateService {
 
     res = res.replaceAll('Обоє', 'Ꙭбє');
     res = res.replaceAll('обоє', 'ꙭбє');
+
+    res = res.replaceAll('Оєв', 'Ө̆');
+    res = res.replaceAll('оєв', 'Ө̆');
 
     res = res.replaceAll('Оє', 'Ө');
     res = res.replaceAll('оє', 'ө');
@@ -363,6 +375,9 @@ export class TranslateService {
     res = res.replaceAll('Єю', 'Є̈');
     res = res.replaceAll('єю', 'є̈');
 
+    res = res.replaceAll('Елв', 'Э̆л');
+    res = res.replaceAll('елв', 'э̆л');
+
     res = res.replaceAll('Ел', 'Эл');
     res = res.replaceAll('ел', 'эл');
 
@@ -375,9 +390,6 @@ export class TranslateService {
     res = res.replaceAll('Чн', 'Ҿ');
     res = res.replaceAll('чн', 'ҿ');
 
-    res = res.replaceAll('Іо', 'Ҩ');
-    res = res.replaceAll('іо', 'ҩ');
-
     res = res.replaceAll('Зн', 'Ӡ');
     res = res.replaceAll('зн', 'ӡ');
 
@@ -386,6 +398,36 @@ export class TranslateService {
 
     res = res.replaceAll('Ат', 'Ꙏт');
     res = res.replaceAll('ат', 'ꙏт');
+
+    res = res.replaceAll('Яв', 'Ӛв');
+    res = res.replaceAll('яв', 'ӛв');
+
+    res = res.replaceAll('Юю', 'Ю̄');
+    res = res.replaceAll('юю', 'ю̄');
+
+    res = res.replaceAll('Юв', 'Ю̆');
+    res = res.replaceAll('юв', 'ю̆');
+
+    res = res.replaceAll('Яя', 'Я̄');
+    res = res.replaceAll('яя', 'я̄');
+
+    res = res.replaceAll('Яв', 'Я̆');
+    res = res.replaceAll('яв', 'я̆');
+
+    res = res.replaceAll('Ов', 'О̆');
+    res = res.replaceAll('ов', 'о̆');
+
+    res = res.replaceAll('Ює', 'Ӫ');
+    res = res.replaceAll('ює', 'ӫ');
+
+    res = res.replaceAll(
+      /дд|тт|зз|сс|цц|лл|нн|жж|шш|рр|вв/g,
+      (match) => match[0] + '̃',
+    );
+    res = res.replaceAll(
+      /Дд|Тт|Зз|Сс|Цц|Лл|Нн|Жж|Шш|Рр|Вв/g,
+      (match) => match[0] + '̃',
+    );
 
     return res;
   }
