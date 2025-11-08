@@ -6,428 +6,426 @@ import { consonantLetters, finalSoftLetters } from './constants/cosntants';
 @Injectable()
 export class TranslateService {
   private async replace(str: string) {
-    let res = str.replaceAll('Ае', 'Ӕ');
-    res = res.replaceAll('ае', 'ӕ');
+    let res = str
+      .replaceAll('Ае', 'Ӕ')
+      .replaceAll('ае', 'ӕ')
 
-    res = res.replaceAll('Дже', 'Ꙉ');
-    res = res.replaceAll('дже', 'ꙉ');
+      .replaceAll('Дже', 'Ꙉ')
+      .replaceAll('дже', 'ꙉ')
 
-    res = res.replaceAll('Дж', 'Ԫ');
-    res = res.replaceAll('дж', 'ԫ');
+      .replaceAll('Дж', 'Ԫ')
+      .replaceAll('дж', 'ԫ')
 
-    res = res.replaceAll('Джмі', 'Ђмі');
-    res = res.replaceAll('джмі', 'ђмі');
+      .replaceAll('Джмі', 'Ђмі')
+      .replaceAll('джмі', 'ђмі')
 
-    res = res.replaceAll('Джі', 'Ђі');
-    res = res.replaceAll('джі', 'ђі');
+      .replaceAll('Джі', 'Ђі')
+      .replaceAll('джі', 'ђі')
 
-    res = res.replaceAll('Дзе', 'Ꙃ');
-    res = res.replaceAll('дзе', 'ꙃ');
+      .replaceAll('Дзе', 'Ꙃ')
+      .replaceAll('дзе', 'ꙃ')
 
-    res = res.replaceAll('Дзьо', 'Ԇӏ');
-    res = res.replaceAll('дзьо', 'ԇӏ');
+      .replaceAll('Дзьо', 'Ԇӏ')
+      .replaceAll('дзьо', 'ԇӏ')
 
-    res = res.replaceAll('Дзю', 'Ԇю');
-    res = res.replaceAll('дзю', 'ԇю');
+      .replaceAll('Дзю', 'Ԇю')
+      .replaceAll('дзю', 'ԇю')
 
-    res = res.replaceAll('Дзя', 'Ԇя');
-    res = res.replaceAll('дзя', 'ԇя');
+      .replaceAll('Дзя', 'Ԇя')
+      .replaceAll('дзя', 'ԇя')
 
-    res = res.replaceAll('Дзі', 'Ԇі');
-    res = res.replaceAll('дзі', 'ԇі');
+      .replaceAll('Дзі', 'Ԇі')
+      .replaceAll('дзі', 'ԇі')
 
-    res = res.replaceAll('Дзв', 'ꚃ');
-    res = res.replaceAll('дзв', 'ꚃ');
+      .replaceAll('Дзв', 'ꚃ')
+      .replaceAll('дзв', 'ꚃ')
 
-    res = res.replaceAll('Дз', 'Ꚉ');
-    res = res.replaceAll('дз', 'ꚉ');
+      .replaceAll('Дз', 'Ꚉ')
+      .replaceAll('дз', 'ꚉ')
 
-    res = res.replaceAll('Оу', 'Ꙋ');
-    res = res.replaceAll('оу', 'ꙋ');
+      .replaceAll('Оу', 'Ꙋ')
+      .replaceAll('оу', 'ꙋ')
 
-    res = res.replaceAll('От', 'Ѿ');
-    res = res.replaceAll('от', 'ѿ');
+      .replaceAll('От', 'Ѿ')
+      .replaceAll('от', 'ѿ')
 
-    res = res.replaceAll('Кс', 'Ѯ');
-    res = res.replaceAll('кс', 'ѯ');
+      .replaceAll('Кс', 'Ѯ')
+      .replaceAll('кс', 'ѯ')
 
-    res = res.replaceAll('Пс', 'Ѱ');
-    res = res.replaceAll('пс', 'ѱ');
+      .replaceAll('Пс', 'Ѱ')
+      .replaceAll('пс', 'ѱ')
 
-    res = res.replaceAll('Фт', 'Ѳ');
-    res = res.replaceAll('фт', 'ѳ');
+      .replaceAll('Фт', 'Ѳ')
+      .replaceAll('фт', 'ѳ')
 
-    res = res.replaceAll('Іо', 'Ҩ');
-    res = res.replaceAll('іо', 'ҩ');
+      .replaceAll('Іо', 'Ҩ')
+      .replaceAll('іо', 'ҩ')
 
-    res = res.replaceAll('Ан', 'Ѧ');
-    res = res.replaceAll('ан', 'ѧ');
+      .replaceAll('Ан', 'Ѧ')
+      .replaceAll('ан', 'ѧ')
 
-    res = res.replaceAll('Ян', 'Ѩ');
-    res = res.replaceAll('ян', 'ѩ');
+      .replaceAll('Ян', 'Ѩ')
+      .replaceAll('ян', 'ѩ')
 
-    res = res.replaceAll('Йон', 'Ѭ');
-    res = res.replaceAll('йон', 'ѭ');
+      .replaceAll('Йон', 'Ѭ')
+      .replaceAll('йон', 'ѭ')
 
-    res = res.replaceAll('Он', 'Ѫ');
-    res = res.replaceAll('он', 'ѫ');
+      .replaceAll('Он', 'Ѫ')
+      .replaceAll('он', 'ѫ')
 
-    res = res.replaceAll('Ен', 'Ꙙ');
-    res = res.replaceAll('ен', 'ꙙ');
+      .replaceAll('Ен', 'Ꙙ')
+      .replaceAll('ен', 'ꙙ')
 
-    res = res.replaceAll('Єн', 'Ꙝ');
-    res = res.replaceAll('єн', 'ꙝ');
+      .replaceAll('Єн', 'Ꙝ')
+      .replaceAll('єн', 'ꙝ')
 
-    res = res.replaceAll('Ін', 'Ꙛ');
-    res = res.replaceAll('ін', 'ꙛ');
+      .replaceAll('Ін', 'Ꙛ')
+      .replaceAll('ін', 'ꙛ')
 
-    res = res.replaceAll('Льо', 'Љӏ');
-    res = res.replaceAll('льо', 'љӏ');
+      .replaceAll('Льо', 'Љӏ')
+      .replaceAll('льо', 'љӏ')
 
-    res = res.replaceAll('Ньо', 'Њӏ');
-    res = res.replaceAll('ньо', 'њӏ');
+      .replaceAll('Ньо', 'Њӏ')
+      .replaceAll('ньо', 'њӏ')
 
-    res = res.replaceAll('Ль', 'Љ');
-    res = res.replaceAll('ль', 'љ');
+      .replaceAll('Ль', 'Љ')
+      .replaceAll('ль', 'љ')
 
-    res = res.replaceAll('Нь', 'Њ');
-    res = res.replaceAll('нь', 'њ');
+      .replaceAll('Нь', 'Њ')
+      .replaceAll('нь', 'њ')
 
-    res = res.replaceAll('Ст', 'Ѕ');
-    res = res.replaceAll('ст', 'ѕ');
+      .replaceAll('Ст', 'Ѕ')
+      .replaceAll('ст', 'ѕ')
 
-    res = res.replaceAll('Нг', 'Ҥ');
-    res = res.replaceAll('нг', 'ҥ');
+      .replaceAll('Нг', 'Ҥ')
+      .replaceAll('нг', 'ҥ')
 
-    res = res.replaceAll('Іа', 'Ꙗ');
-    res = res.replaceAll('іа', 'ꙗ');
+      .replaceAll('Іа', 'Ꙗ')
+      .replaceAll('іа', 'ꙗ')
 
-    res = res.replaceAll('Іє', 'Ѥ');
-    res = res.replaceAll('іє', 'ѥ');
+      .replaceAll('Іє', 'Ѥ')
+      .replaceAll('іє', 'ѥ')
 
-    res = res.replaceAll('Чч', 'Ꚇ');
-    res = res.replaceAll('чч', 'ꚇ');
+      .replaceAll('Чч', 'Ꚇ')
+      .replaceAll('чч', 'ꚇ')
 
-    res = res.replaceAll('Ір', 'Ѷр');
-    res = res.replaceAll('ір', 'ѷр');
+      .replaceAll('Ір', 'Ѷр')
+      .replaceAll('ір', 'ѷр')
 
-    // res = res.replaceAll('ії', 'ї');
+      // res = res.replaceAll('ії', 'ї');
 
-    res = res.replaceAll('Йо', 'Ё');
-    res = res.replaceAll('йо', 'ё');
+      .replaceAll('Йо', 'Ё')
+      .replaceAll('йо', 'ё')
 
-    res = res.replaceAll('Ом', 'Ѡм');
-    res = res.replaceAll('ом', 'ѡм');
+      .replaceAll('Ом', 'Ѡм')
+      .replaceAll('ом', 'ѡм')
 
-    res = res.replaceAll('Яє', 'Ԙ');
-    res = res.replaceAll('яє', 'ԙ');
+      .replaceAll('Яє', 'Ԙ')
+      .replaceAll('яє', 'ԙ')
 
-    res = res.replaceAll('Рх', 'Ԗ');
-    res = res.replaceAll('рх', 'ԗ');
+      .replaceAll('Рх', 'Ԗ')
+      .replaceAll('рх', 'ԗ')
 
-    res = res.replaceAll('Лх', 'Ԕ');
-    res = res.replaceAll('лх', 'ԕ');
+      .replaceAll('Лх', 'Ԕ')
+      .replaceAll('лх', 'ԕ')
 
-    res = res.replaceAll('Ер', 'Ър');
-    res = res.replaceAll('ер', 'ър');
+      .replaceAll('Ер', 'Ър')
+      .replaceAll('ер', 'ър')
 
-    res = res.replaceAll('Єр', 'Ъ̈р');
-    res = res.replaceAll('єр', 'ъ̈р');
+      .replaceAll('Єр', 'Ъ̈р')
+      .replaceAll('єр', 'ъ̈р')
 
-    res = res.replaceAll('Еер', 'Ъ̄р');
-    res = res.replaceAll('еер', 'ъ̄р');
+      .replaceAll('Еер', 'Ъ̄р')
+      .replaceAll('еер', 'ъ̄р')
 
-    res = res.replaceAll('Еєр', 'Ъ̈̄р');
-    res = res.replaceAll('еєр', 'ъ̈̄р');
+      .replaceAll('Еєр', 'Ъ̈̄р')
+      .replaceAll('еєр', 'ъ̈̄р')
 
-    res = res.replaceAll('Ор', 'Ҍр');
-    res = res.replaceAll('ор', 'ҍр');
+      .replaceAll('Ор', 'Ҍр')
+      .replaceAll('ор', 'ҍр')
 
-    res = res.replaceAll('Иї', 'Ӥ');
-    res = res.replaceAll('иї', 'ӥ');
+      .replaceAll('Иї', 'Ӥ')
+      .replaceAll('иї', 'ӥ')
 
-    res = res.replaceAll('Єєв', 'Ӭ̄в');
-    res = res.replaceAll('єєв', 'ӭ̄в');
+      .replaceAll('Єєв', 'Ӭ̄в')
+      .replaceAll('єєв', 'ӭ̄в')
 
-    res = res.replaceAll('жив', 'Жы̆');
-    res = res.replaceAll('шив', 'Шы̆');
+      .replaceAll('жив', 'Жы̆')
+      .replaceAll('шив', 'Шы̆')
 
-    res = res.replaceAll('Івл', ' Ы̆л');
-    res = res.replaceAll('івл', ' Ы̆л');
+      .replaceAll('Івл', ' Ы̆л')
+      .replaceAll('івл', ' Ы̆л')
 
-    res = res.replaceAll(/[бпвмф]е/giu, (match) => match[0] + 'ѣ');
-    res = res.replaceAll(/[бпвмф]є/giu, (match) => match[0] + 'ꙓ');
-    res = res.replaceAll(/[бпвмф]і/giu, (match) => match[0] + 'ꙇ');
-    res = res.replaceAll(/[бпвмф]и/giu, (match) => match[0] + 'ꙑ');
+      .replaceAll('Оєв', 'Ө̆')
+      .replaceAll('оєв', 'Ө̆')
 
-    res = res.replaceAll(/Є[бпвмф]/gu, (match) => 'Ꙓ' + match[1]);
-    res = res.replaceAll(/Е[бпвмф]/gu, (match) => 'Ѣ' + match[1]);
-    res = res.replaceAll(/И[бпвмф]/gu, (match) => 'Ꙑ' + match[1]);
-    res = res.replaceAll(/І[бпвмф]/gu, (match) => 'Ꙇ' + match[1]);
+      .replaceAll(/[бпвмф]е/giu, (match) => match[0] + 'ѣ')
+      .replaceAll(/[бпвмф]є/giu, (match) => match[0] + 'ꙓ')
+      .replaceAll(/[бпвмф]і/giu, (match) => match[0] + 'ꙇ')
+      .replaceAll(/[бпвмф]и/giu, (match) => match[0] + 'ꙑ')
 
-    res = res.replaceAll(/є[бпвмф]/gu, (match) => 'ꙓ' + match[1]);
-    res = res.replaceAll(/е[бпвмф]/gu, (match) => 'ѣ' + match[1]);
-    res = res.replaceAll(/и[бпвмф]/gu, (match) => 'ꙑ' + match[1]);
-    res = res.replaceAll(/і[бпвмф]/gu, (match) => 'ꙇ' + match[1]);
+      .replaceAll(/Є[бпвмф]/gu, (match) => 'Ꙓ' + match[1])
+      .replaceAll(/Е[бпвмф]/gu, (match) => 'Ѣ' + match[1])
+      .replaceAll(/И[бпвмф]/gu, (match) => 'Ꙑ' + match[1])
+      .replaceAll(/І[бпвмф]/gu, (match) => 'Ꙇ' + match[1])
 
-    res = res.replaceAll('Иил', 'Ы̄л');
-    res = res.replaceAll('иил', 'ы̄л');
+      .replaceAll(/є[бпвмф]/gu, (match) => 'ꙓ' + match[1])
+      .replaceAll(/е[бпвмф]/gu, (match) => 'ѣ' + match[1])
+      .replaceAll(/и[бпвмф]/gu, (match) => 'ꙑ' + match[1])
+      .replaceAll(/і[бпвмф]/gu, (match) => 'ꙇ' + match[1])
 
-    res = res.replaceAll('Ил', 'Ыл');
-    res = res.replaceAll('ил', 'ыл');
+      .replaceAll('Иил', 'Ы̄л')
+      .replaceAll('иил', 'ы̄л')
 
-    res = res.replaceAll('Тьо', 'ፔӏ');
-    res = res.replaceAll('тьо', 'ፔӏ');
+      .replaceAll('Ил', 'Ыл')
+      .replaceAll('ил', 'ыл')
 
-    res = res.replaceAll('Дьо', 'Ԁӏ');
-    res = res.replaceAll('дьо', 'ԁӏ');
+      .replaceAll('Тьо', 'ፔӏ')
+      .replaceAll('тьо', 'ፔӏ')
 
-    res = res.replaceAll('Зьо', 'Зӏ');
-    res = res.replaceAll('зьо', 'зӏ');
+      .replaceAll('Дьо', 'Ԁӏ')
+      .replaceAll('дьо', 'ԁӏ')
 
-    res = res.replaceAll('Сьо', 'Сӏ');
-    res = res.replaceAll('сьо', 'сӏ');
+      .replaceAll('Зьо', 'Зӏ')
+      .replaceAll('зьо', 'зӏ')
 
-    res = res.replaceAll('Цьо', 'Ꙡӏ');
-    res = res.replaceAll('цьо', 'ꙡӏ');
+      .replaceAll('Сьо', 'Сӏ')
+      .replaceAll('сьо', 'сӏ')
 
-    res = res.replaceAll('Рьо', 'Рӏ');
-    res = res.replaceAll('рьо', 'рӏ');
+      .replaceAll('Цьо', 'Ꙡӏ')
+      .replaceAll('цьо', 'ꙡӏ')
 
-    res = res.replaceAll('ьо', 'ӏ');
+      .replaceAll('Рьо', 'Рӏ')
+      .replaceAll('рьо', 'рӏ')
 
-    res = res.replaceAll('Ді', 'Ԁ');
-    res = res.replaceAll('ді', 'ԁ');
+      .replaceAll('ьо', 'ӏ')
 
-    res = res.replaceAll('Сь', 'Ԍ');
-    res = res.replaceAll('Зь', 'Ԅ');
-    res = res.replaceAll('Дь', 'Ԃ');
+      .replaceAll('Ді', 'Ԁ')
+      .replaceAll('ді', 'ԁ')
 
-    res = res.replaceAll('Ть', 'ፔ');
-    res = res.replaceAll('ть', 'ፔ');
+      .replaceAll('Сь', 'Ԍ')
+      .replaceAll('Зь', 'Ԅ')
+      .replaceAll('Дь', 'Ԃ')
 
-    res = res.replaceAll('Ин', 'Ꙟ');
-    res = res.replaceAll('ин', 'ꙟ');
+      .replaceAll('Ть', 'ፔ')
+      .replaceAll('ть', 'ፔ')
 
-    res = res.replaceAll('Ува', 'Ўә ');
-    res = res.replaceAll('ува', 'ўә');
+      .replaceAll('Ин', 'Ꙟ')
+      .replaceAll('ин', 'ꙟ')
 
-    res = res.replaceAll('Шва', 'Ꚗә');
-    res = res.replaceAll('шва', 'ꚗә');
+      .replaceAll('Ува', 'Ўә ')
+      .replaceAll('ува', 'ўә')
 
-    res = res.replaceAll('Цв', 'Ꚏә');
-    res = res.replaceAll('цв', 'ꚏә');
+      .replaceAll('Шва', 'Ꚗә')
+      .replaceAll('шва', 'ꚗә')
 
-    res = res.replaceAll('Шв', 'Ꚗ');
-    res = res.replaceAll('шв', 'ꚗ');
+      .replaceAll('Цв', 'Ꚏә')
+      .replaceAll('цв', 'ꚏә')
 
-    res = res.replaceAll('Цв', 'Ꚏ');
-    res = res.replaceAll('цв', 'ꚏ');
+      .replaceAll('Шв', 'Ꚗ')
+      .replaceAll('шв', 'ꚗ')
 
-    res = res.replaceAll('Ва', 'Вә');
-    res = res.replaceAll('ва', 'вә');
+      .replaceAll('Цв', 'Ꚏ')
+      .replaceAll('цв', 'ꚏ')
 
-    res = res.replaceAll('Аав', 'Ә̄');
-    res = res.replaceAll('Аав', 'ә̄');
+      .replaceAll('Ва', 'Вә')
+      .replaceAll('ва', 'вә')
 
-    res = res.replaceAll('Ав', 'Әв');
-    res = res.replaceAll('ав', 'әв');
+      .replaceAll('Аав', 'Ә̄')
+      .replaceAll('Аав', 'ә̄')
 
-    res = res.replaceAll('Ув', 'Ў');
-    res = res.replaceAll('ув', 'ў');
+      .replaceAll('Ав', 'Әв')
+      .replaceAll('ав', 'әв')
 
-    res = res.replaceAll('Чж', 'Џ');
-    res = res.replaceAll('чж', 'џ');
+      .replaceAll('Ув', 'Ў')
+      .replaceAll('ув', 'ў')
 
-    res = res.replaceAll('Чі', 'Ћі');
-    res = res.replaceAll('чі', 'ћі');
-    res = res.replaceAll('Чь', 'Ћь');
-    res = res.replaceAll('чь', 'ћь');
+      .replaceAll('Чж', 'Џ')
+      .replaceAll('чж', 'џ')
 
-    res = res.replaceAll('Обоє', 'Ꙭбє');
-    res = res.replaceAll('обоє', 'ꙭбє');
+      .replaceAll('Чі', 'Ћі')
+      .replaceAll('чі', 'ћі')
+      .replaceAll('Чь', 'Ћь')
+      .replaceAll('чь', 'ћь')
 
-    res = res.replaceAll('Оєв', 'Ө̆');
-    res = res.replaceAll('оєв', 'Ө̆');
+      .replaceAll('Обоє', 'Ꙭбє')
+      .replaceAll('обоє', 'ꙭбє')
 
-    res = res.replaceAll('Оє', 'Ө');
-    res = res.replaceAll('оє', 'ө');
+      .replaceAll('Оє', 'Ө')
+      .replaceAll('оє', 'ө')
 
-    res = res.replaceAll('Хва', 'Ꚕә');
-    res = res.replaceAll('хва', 'ꚕә');
-    res = res.replaceAll('Хв', 'Ꚕ');
-    res = res.replaceAll('хв', 'ꚕ');
+      .replaceAll('Хва', 'Ꚕә')
+      .replaceAll('хва', 'ꚕә')
+      .replaceAll('Хв', 'Ꚕ')
+      .replaceAll('хв', 'ꚕ')
 
-    res = res.replaceAll('Шх', 'Һ');
-    res = res.replaceAll('шх', 'һ');
+      .replaceAll('Шх', 'Һ')
+      .replaceAll('шх', 'һ')
 
-    res = res.replaceAll('Кю', 'Ԛ');
-    res = res.replaceAll('кю', 'ԛ');
+      .replaceAll('Кю', 'Ԛ')
+      .replaceAll('кю', 'ԛ')
 
-    res = res.replaceAll('Дч', 'Ԭ');
-    res = res.replaceAll('дч', 'ԭ');
+      .replaceAll('Дч', 'Ԭ')
+      .replaceAll('дч', 'ԭ')
 
-    res = res.replaceAll('Тц', 'Ҵ');
-    res = res.replaceAll('тц', 'ҵ');
+      .replaceAll('Тц', 'Ҵ')
+      .replaceAll('тц', 'ҵ')
 
-    res = res.replaceAll('Коп', 'Ҁ');
-    res = res.replaceAll('коп', 'ҁ');
+      .replaceAll('Коп', 'Ҁ')
+      .replaceAll('коп', 'ҁ')
 
-    res = res.replaceAll('Зм', 'Ꙁ');
-    res = res.replaceAll('зм', 'ꙁ');
+      .replaceAll('Зм', 'Ꙁ')
+      .replaceAll('зм', 'ꙁ')
 
-    res = res.replaceAll('Тч', 'Ꚓ');
-    res = res.replaceAll('тч', 'ꚓ');
+      .replaceAll('Тч', 'Ꚓ')
+      .replaceAll('тч', 'ꚓ')
 
-    res = res.replaceAll('Тв', 'Ꚍ');
-    res = res.replaceAll('тв', 'ꚍ');
+      .replaceAll('Тв', 'Ꚍ')
+      .replaceAll('тв', 'ꚍ')
 
-    res = res.replaceAll('Дв', 'Ꚁ');
-    res = res.replaceAll('дв', 'ꚁ');
+      .replaceAll('Дв', 'Ꚁ')
+      .replaceAll('дв', 'ꚁ')
 
-    res = res.replaceAll('Тс', 'Ꚑ');
-    res = res.replaceAll('тс', 'ꚑ');
+      .replaceAll('Тс', 'Ꚑ')
+      .replaceAll('тс', 'ꚑ')
 
-    res = res.replaceAll('Ир', 'Ѵр');
-    res = res.replaceAll('ир', 'ѵр');
+      .replaceAll('Ир', 'Ѵр')
+      .replaceAll('ир', 'ѵр')
 
-    res = res.replaceAll('Дво', 'Двꙭ ');
-    res = res.replaceAll('дво', 'двꙭ ');
+      .replaceAll('Дво', 'Двꙭ ')
+      .replaceAll('дво', 'двꙭ ')
 
-    res = res.replaceAll('Окр', 'Ꚛкр');
-    res = res.replaceAll('окр', 'ꚛкр');
+      .replaceAll('Окр', 'Ꚛкр')
+      .replaceAll('окр', 'ꚛкр')
 
-    res = res.replaceAll('Охр', 'Ꚛхр');
-    res = res.replaceAll('охр', 'ꚛхр');
+      .replaceAll('Охр', 'Ꚛхр')
+      .replaceAll('охр', 'ꚛхр')
 
-    res = res.replaceAll('Багато', 'Багтꙮ');
-    res = res.replaceAll('багато', 'багтꙮ');
+      .replaceAll('Багато', 'Багтꙮ')
+      .replaceAll('багато', 'багтꙮ')
 
-    res = res.replaceAll('Много', 'Мнꙮг');
-    res = res.replaceAll('много', 'мнꙮг');
+      .replaceAll('Много', 'Мнꙮг')
+      .replaceAll('много', 'мнꙮг')
 
-    res = res.replaceAll('Ог', 'Ѻ');
-    res = res.replaceAll('ог', 'ѻ');
+      .replaceAll('Ог', 'Ѻ')
+      .replaceAll('ог', 'ѻ')
 
-    res = res.replaceAll('Оч', 'Ꙫ');
-    res = res.replaceAll('оч', 'ꙫ');
+      .replaceAll('Оч', 'Ꙫ')
+      .replaceAll('оч', 'ꙫ')
 
-    res = res.replaceAll('Ок', 'Ꙩ');
-    res = res.replaceAll('ок', 'ꙩ');
+      .replaceAll('Ок', 'Ꙩ')
+      .replaceAll('ок', 'ꙩ')
 
-    res = res.replaceAll('Очо', 'Ꚙч');
-    res = res.replaceAll('очо', 'ꚙч');
+      .replaceAll('Очо', 'Ꚙч')
+      .replaceAll('очо', 'ꚙч')
 
-    res = res.replaceAll('Оі', 'Ꙕ');
-    res = res.replaceAll('оі', 'ꙕ');
+      .replaceAll('Оі', 'Ꙕ')
+      .replaceAll('оі', 'ꙕ')
 
-    res = res.replaceAll('Аа', 'А̄');
-    res = res.replaceAll('аа', 'а̄');
+      .replaceAll('Аа', 'А̄')
+      .replaceAll('аа', 'а̄')
 
-    res = res.replaceAll('Оо', 'О̄');
-    res = res.replaceAll('оо', 'о̄');
+      .replaceAll('Оо', 'О̄')
+      .replaceAll('оо', 'о̄')
 
-    res = res.replaceAll('Уу', 'Ӯ');
-    res = res.replaceAll('уу', 'ӯ');
+      .replaceAll('Уу', 'Ӯ')
+      .replaceAll('уу', 'ӯ')
 
-    res = res.replaceAll('Ее', 'Е̄');
-    res = res.replaceAll('ее', 'е̄');
+      .replaceAll('Ее', 'Е̄')
+      .replaceAll('ее', 'е̄')
 
-    res = res.replaceAll('Ии', 'Ӣ');
-    res = res.replaceAll('ии', 'ӣ');
+      .replaceAll('Ии', 'Ӣ')
+      .replaceAll('ии', 'ӣ')
 
-    res = res.replaceAll('Її', 'И̃');
-    res = res.replaceAll('її', 'и̃');
+      .replaceAll('Її', 'И̃')
+      .replaceAll('її', 'и̃')
 
-    res = res.replaceAll('Іі', 'Ī');
-    res = res.replaceAll('іі', 'ī');
+      .replaceAll('Іі', 'Ī')
+      .replaceAll('іі', 'ī')
 
-    res = res.replaceAll('Ая', 'Ӓ̄');
-    res = res.replaceAll('ая', 'ӓ̄');
+      .replaceAll('Ая', 'Ӓ̄')
+      .replaceAll('ая', 'ӓ̄')
 
-    res = res.replaceAll('Еє', 'Ё̄');
-    res = res.replaceAll('еє', 'ё̄');
+      .replaceAll('Еє', 'Ё̄')
+      .replaceAll('еє', 'ё̄')
 
-    res = res.replaceAll('Ую', 'Ӱ̄');
-    res = res.replaceAll('ую', 'ӱ̄');
+      .replaceAll('Ую', 'Ӱ̄')
+      .replaceAll('ую', 'ӱ̄')
 
-    res = res.replaceAll('Ойо', 'Ӧ̄');
-    res = res.replaceAll('Ойо', 'ӧ̄');
+      .replaceAll('Ойо', 'Ӧ̄')
+      .replaceAll('Ойо', 'ӧ̄')
 
-    res = res.replaceAll('Зжв', 'Ꚅ̆');
-    res = res.replaceAll('зжв', 'ꚅ̆');
+      .replaceAll('Зжв', 'Ꚅ̆')
+      .replaceAll('зжв', 'ꚅ̆')
 
-    res = res.replaceAll('Зж', 'Ꚅ');
-    res = res.replaceAll('зж', 'ꚅ');
+      .replaceAll('Зж', 'Ꚅ')
+      .replaceAll('зж', 'ꚅ')
 
-    res = res.replaceAll('Ий', 'Й̵');
-    res = res.replaceAll('ий', 'й̵');
+      .replaceAll('Ий', 'Й̵')
+      .replaceAll('ий', 'й̵')
 
-    res = res.replaceAll('Ій', 'Ҋ');
-    res = res.replaceAll('ій', 'ҋ');
+      .replaceAll('Ій', 'Ҋ')
+      .replaceAll('ій', 'ҋ')
 
-    res = res.replaceAll('Иј', 'Й');
-    res = res.replaceAll('иј', 'й');
+      .replaceAll('Иј', 'Й')
+      .replaceAll('иј', 'й')
 
-    res = res.replaceAll('Іј', 'Ҋ');
-    res = res.replaceAll('іј', 'ҋ');
+      .replaceAll('Іј', 'Ҋ')
+      .replaceAll('іј', 'ҋ')
 
-    res = res.replaceAll('Єю', 'Є̈');
-    res = res.replaceAll('єю', 'є̈');
+      .replaceAll('Єю', 'Є̈')
+      .replaceAll('єю', 'є̈')
 
-    res = res.replaceAll('Елв', 'Э̆л');
-    res = res.replaceAll('елв', 'э̆л');
+      .replaceAll('Елв', 'Э̆л')
+      .replaceAll('елв', 'э̆л')
 
-    res = res.replaceAll('Ел', 'Эл');
-    res = res.replaceAll('ел', 'эл');
+      .replaceAll('Ел', 'Эл')
+      .replaceAll('ел', 'эл')
 
-    res = res.replaceAll('Єл', 'Ӭл');
-    res = res.replaceAll('єл', 'ӭл');
+      .replaceAll('Єл', 'Ӭл')
+      .replaceAll('єл', 'ӭл')
 
-    res = res.replaceAll('Чк', 'Ҽ');
-    res = res.replaceAll('чк', 'ҽ');
+      .replaceAll('Чк', 'Ҽ')
+      .replaceAll('чк', 'ҽ')
 
-    res = res.replaceAll('Чн', 'Ҿ');
-    res = res.replaceAll('чн', 'ҿ');
+      .replaceAll('Чн', 'Ҿ')
+      .replaceAll('чн', 'ҿ')
 
-    res = res.replaceAll('Зн', 'Ӡ');
-    res = res.replaceAll('зн', 'ӡ');
+      .replaceAll('Зн', 'Ӡ')
+      .replaceAll('зн', 'ӡ')
 
-    res = res.replaceAll('Ар', 'Ьр');
-    res = res.replaceAll('ар', 'ьр');
+      .replaceAll('Ар', 'Ьр')
+      .replaceAll('ар', 'ьр')
 
-    res = res.replaceAll('Ат', 'Ꙏт');
-    res = res.replaceAll('ат', 'ꙏт');
+      .replaceAll('Ат', 'Ꙏт')
+      .replaceAll('ат', 'ꙏт')
 
-    res = res.replaceAll('Яв', 'Ӛв');
-    res = res.replaceAll('яв', 'ӛв');
+      .replaceAll('Яв', 'Ӛв')
+      .replaceAll('яв', 'ӛв')
 
-    res = res.replaceAll('Юю', 'Ю̄');
-    res = res.replaceAll('юю', 'ю̄');
+      .replaceAll('Юю', 'Ю̄')
+      .replaceAll('юю', 'ю̄')
 
-    res = res.replaceAll('Юв', 'Ю̆');
-    res = res.replaceAll('юв', 'ю̆');
+      .replaceAll('Юв', 'Ю̆')
+      .replaceAll('юв', 'ю̆')
 
-    res = res.replaceAll('Яя', 'Я̄');
-    res = res.replaceAll('яя', 'я̄');
+      .replaceAll('Яя', 'Я̄')
+      .replaceAll('яя', 'я̄')
 
-    res = res.replaceAll('Яв', 'Я̆');
-    res = res.replaceAll('яв', 'я̆');
+      .replaceAll('Яв', 'Я̆')
+      .replaceAll('яв', 'я̆')
 
-    res = res.replaceAll('Ов', 'О̆');
-    res = res.replaceAll('ов', 'о̆');
+      .replaceAll('Ов', 'О̆')
+      .replaceAll('ов', 'о̆')
 
-    res = res.replaceAll('Ює', 'Ӫ');
-    res = res.replaceAll('ює', 'ӫ');
+      .replaceAll('Ює', 'Ӫ')
+      .replaceAll('ює', 'ӫ')
 
-    res = res.replaceAll(
-      /дд|тт|зз|сс|цц|лл|нн|жж|шш|рр|вв/g,
-      (match) => match[0] + '̃',
-    );
-    res = res.replaceAll(
-      /Дд|Тт|Зз|Сс|Цц|Лл|Нн|Жж|Шш|Рр|Вв/g,
-      (match) => match[0] + '̃',
-    );
+      .replaceAll(/дд|тт|зз|сс|цц|лл|нн|жж|шш|рр|вв/gi, (m) => m[0] + '̃')
+      .replaceAll(/Дд|Тт|Зз|Сс|Цц|Лл|Нн|Жж|Шш|Рр|Вв/g, (m) => m[0] + '̃')
+
+      .replaceAll(/Зв|Зг|Зд|Зр|Зс|Зт|Зх|Зц/g, (m) => m[1].toUpperCase() + '̌')
+      .replaceAll(/зв|зг|зд|зр|зс|зт|зх|зц/g, (m) => m[1] + '̌');
 
     return res;
   }
