@@ -148,35 +148,39 @@ export class TranslateService {
       .replaceAll('Єєв', 'Ӭ̄в')
       .replaceAll('єєв', 'ӭ̄в')
 
-      .replaceAll('жив', 'Жы̆')
-      .replaceAll('шив', 'Шы̆')
+      .replaceAll('Ил', 'Ыл')
+      .replaceAll('ил', 'ыл')
+      .replaceAll(/[жшЖШ]ив/gu, (m) => m[0] + 'ы̆')
 
-      .replaceAll('Івл', ' Ы̆л')
-      .replaceAll('івл', ' Ы̆л')
+      .replaceAll('Жи', 'Жы')
+      .replaceAll('жи', 'жы')
+
+      .replaceAll('Ши', 'Шы')
+      .replaceAll('ши', 'шы')
+
+      .replaceAll('Ив', 'Ы̆')
+      .replaceAll('ив', 'ы̆')
 
       .replaceAll('Оєв', 'Ө̆')
       .replaceAll('оєв', 'Ө̆')
 
-      .replaceAll(/[бпвмф]е/giu, (match) => match[0] + 'ѣ')
-      .replaceAll(/[бпвмф]є/giu, (match) => match[0] + 'ꙓ')
-      .replaceAll(/[бпвмф]і/giu, (match) => match[0] + 'ꙇ')
-      .replaceAll(/[бпвмф]и/giu, (match) => match[0] + 'ꙑ')
+      .replaceAll('Иил', 'Ы̄л')
+      .replaceAll('иил', 'ы̄л')
+
+      .replaceAll(/[бпвмфБПВМФ]е/gu, (match) => match[0] + 'ѣ')
+      .replaceAll(/[бпвмфБПВМФ]є/gu, (match) => match[0] + 'ꙓ')
+      .replaceAll(/[бпвмфБПВМФ]і/gu, (match) => match[0] + 'ꙇ')
+      .replaceAll(/[бпвмфБПВМФ]и/gu, (match) => match[0] + 'ꙑ')
 
       .replaceAll(/Є[бпвмф]/gu, (match) => 'Ꙓ' + match[1])
       .replaceAll(/Е[бпвмф]/gu, (match) => 'Ѣ' + match[1])
-      .replaceAll(/И[бпвмф]/gu, (match) => 'Ꙑ' + match[1])
+      .replaceAll(/И[бпмф]/gu, (match) => 'Ꙑ' + match[1])
       .replaceAll(/І[бпвмф]/gu, (match) => 'Ꙇ' + match[1])
 
       .replaceAll(/є[бпвмф]/gu, (match) => 'ꙓ' + match[1])
       .replaceAll(/е[бпвмф]/gu, (match) => 'ѣ' + match[1])
-      .replaceAll(/и[бпвмф]/gu, (match) => 'ꙑ' + match[1])
+      .replaceAll(/и[бпмф]/gu, (match) => 'ꙑ' + match[1])
       .replaceAll(/і[бпвмф]/gu, (match) => 'ꙇ' + match[1])
-
-      .replaceAll('Иил', 'Ы̄л')
-      .replaceAll('иил', 'ы̄л')
-
-      .replaceAll('Ил', 'Ыл')
-      .replaceAll('ил', 'ыл')
 
       .replaceAll('Тьо', 'ፔӏ')
       .replaceAll('тьо', 'ፔӏ')
