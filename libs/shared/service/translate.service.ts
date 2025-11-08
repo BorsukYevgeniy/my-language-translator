@@ -339,8 +339,8 @@ export class TranslateService {
       .replaceAll('Ии', 'Ӣ')
       .replaceAll('ии', 'ӣ')
 
-      .replaceAll('Її', 'И̃')
-      .replaceAll('її', 'и̃')
+      .replaceAll('Її', 'Ї̄')
+      .replaceAll('її', 'ї̄')
 
       .replaceAll('Іі', 'Ī')
       .replaceAll('іі', 'ī')
