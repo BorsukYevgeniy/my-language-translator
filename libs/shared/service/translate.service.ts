@@ -112,8 +112,6 @@ export class TranslateService {
       .replaceAll('Ір', 'Ѷр')
       .replaceAll('ір', 'ѷр')
 
-      // res = res.replaceAll('ії', 'ї');
-
       .replaceAll('Йо', 'Ё')
       .replaceAll('йо', 'ё')
 
@@ -425,7 +423,13 @@ export class TranslateService {
       .replaceAll(/Дд|Тт|Зз|Сс|Цц|Лл|Нн|Жж|Шш|Рр|Вв/g, (m) => m[0] + '̃')
 
       .replaceAll(/Зв|Зг|Зд|Зр|Зс|Зт|Зх|Зц/g, (m) => m[1].toUpperCase() + '̌')
-      .replaceAll(/зв|зг|зд|зр|зс|зт|зх|зц/g, (m) => m[1] + '̌');
+      .replaceAll(/зв|зг|зд|зр|зс|зт|зх|зц/g, (m) => m[1] + '̌')
+
+      .replaceAll('Ао', 'А̊')
+      .replaceAll('ао', 'а̊')
+
+      .replaceAll('Уо', 'У̊')
+      .replaceAll('уо', 'у̊');
 
     return res;
   }
@@ -466,6 +470,17 @@ export class TranslateService {
         wordArr.pop();
         wordArr.push('ј');
         wordArr.push('ъ');
+
+        words[i] = wordArr.join('');
+      } else if (
+        words[i][words[i].length - 1] === 'ї' &&
+        words[i][words[i].length - 2] === 'і'
+      ) {
+        const wordArr = words[i].split('');
+
+        wordArr.pop();
+        wordArr.pop();
+        wordArr.push('ї');
 
         words[i] = wordArr.join('');
       }
