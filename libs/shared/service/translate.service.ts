@@ -369,8 +369,8 @@ export class TranslateService {
       .replaceAll('Ій', 'Ҋ')
       .replaceAll('ій', 'ҋ')
 
-      .replaceAll('Иј', 'Й')
-      .replaceAll('иј', 'й')
+      .replaceAll('Иј', 'Й̵')
+      .replaceAll('иј', 'й̵')
 
       .replaceAll('Іј', 'Ҋ')
       .replaceAll('іј', 'ҋ')
@@ -404,6 +404,7 @@ export class TranslateService {
 
       .replaceAll('Яв', 'Ӛв')
       .replaceAll('яв', 'ӛв')
+      .replaceAll('вя', 'вӛ')
 
       .replaceAll('Юю', 'Ю̄')
       .replaceAll('юю', 'ю̄')
@@ -413,9 +414,6 @@ export class TranslateService {
 
       .replaceAll('Яя', 'Я̄')
       .replaceAll('яя', 'я̄')
-
-      .replaceAll('Яв', 'Я̆')
-      .replaceAll('яв', 'я̆')
 
       .replaceAll('Ов', 'О̆')
       .replaceAll('ов', 'о̆')
