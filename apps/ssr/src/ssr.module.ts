@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
+import { TranslateService } from '@shared/service';
 import { SsrController } from './ssr.controller';
-import { SsrService } from './ssr.service';
 
 @Module({
-  imports: [],
   controllers: [SsrController],
-  providers: [SsrService],
+  providers: [TranslateService],
 })
 export class SsrModule {}

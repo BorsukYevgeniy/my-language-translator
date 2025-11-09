@@ -8,3 +8,5 @@ test.txt
 # env
 *.env
 
+# vscode config
+.vscode

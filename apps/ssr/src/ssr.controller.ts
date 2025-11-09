@@ -1,12 +1,22 @@
-import { Controller, Get } from '@nestjs/common';
-import { SsrService } from './ssr.service';
+import { Body, Controller, Get, Post, Render } from '@nestjs/common';
+import { TextDto } from '@shared/dto';
+import { ParseTextPipe } from '@shared/pipe';
+import { TranslateService } from '@shared/service';
 
-@Controller()
+@Controller('translate')
 export class SsrController {
-  constructor(private readonly ssrService: SsrService) {}
+  constructor(private readonly translateService: TranslateService) {}
+
+  @Post()
+  @Render('translate/translate.ejs')
+  async translate(@Body(ParseTextPipe) text: TextDto) {
+    const translatedText = await this.translateService.translate(text);
+    return { translatedText: translatedText.text, text: text.text };
+  }
 
   @Get()
-  getHello(): string {
-    return this.ssrService.getHello();
+  @Render('translate/translate.ejs')
+  async renderTranslatePage() {
+    return { translatedText: undefined, text: undefined };
   }
 }

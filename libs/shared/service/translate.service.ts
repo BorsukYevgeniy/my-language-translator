@@ -7,6 +7,12 @@ import { consonantLetters, finalSoftLetters } from './constants/cosntants';
 export class TranslateService {
   private async replace(str: string) {
     let res = str
+      .replaceAll(
+        /(б|п|в|м|ф|г|ж|ч|ш|к|х|г|ґ)[іяює]/giu,
+        (m) => m[0] + 'ҍ' + m[1],
+      )
+      .replaceAll(/дж[іяює]/giu, (m) => m[0] + m[1] + 'ҍ' + m[2])
+
       .replaceAll('Ае', 'Ӕ')
       .replaceAll('ае', 'ӕ')
 
@@ -139,9 +145,6 @@ export class TranslateService {
       .replaceAll('Еєр', 'Ъ̈̄р')
       .replaceAll('еєр', 'ъ̈̄р')
 
-      .replaceAll('Ор', 'Ҍр')
-      .replaceAll('ор', 'ҍр')
-
       .replaceAll('Иї', 'Ӥ')
       .replaceAll('иї', 'ӥ')
 
@@ -158,29 +161,28 @@ export class TranslateService {
       .replaceAll('Ши', 'Шы')
       .replaceAll('ши', 'шы')
 
-      .replaceAll('Ив', 'Ы̆')
-      .replaceAll('ив', 'ы̆')
+      .replaceAll('Иж', 'Ыж')
+      .replaceAll('иж', 'ыж')
+      .replaceAll('Иш', 'Ыш')
+      .replaceAll('иш', 'ыш')
 
       .replaceAll('Оєв', 'Ө̆')
       .replaceAll('оєв', 'Ө̆')
 
-      .replaceAll('Иил', 'Ы̄л')
-      .replaceAll('иил', 'ы̄л')
+      .replaceAll(/[бпвмфБПВМФ]е/gu, (m) => m[0] + 'ѣ')
+      .replaceAll(/[бпвмфБПВМФ]є/gu, (m) => m[0] + 'ꙓ')
+      .replaceAll(/[бпвмфБПВМФ]і/gu, (m) => m[0] + 'ꙇ')
+      .replaceAll(/[бпвмфБПВМФ]и/gu, (m) => m[0] + 'ꙑ')
 
-      .replaceAll(/[бпвмфБПВМФ]е/gu, (match) => match[0] + 'ѣ')
-      .replaceAll(/[бпвмфБПВМФ]є/gu, (match) => match[0] + 'ꙓ')
-      .replaceAll(/[бпвмфБПВМФ]і/gu, (match) => match[0] + 'ꙇ')
-      .replaceAll(/[бпвмфБПВМФ]и/gu, (match) => match[0] + 'ꙑ')
+      .replaceAll(/Є[бпвмф]/gu, (m) => 'Ꙓ' + m[1])
+      .replaceAll(/Е[бпвмф]/gu, (m) => 'Ѣ' + m[1])
+      .replaceAll(/И[бпвмф]/gu, (m) => 'Ꙑ' + m[1])
+      .replaceAll(/І[бпвмф]/gu, (m) => 'Ꙇ' + m[1])
 
-      .replaceAll(/Є[бпвмф]/gu, (match) => 'Ꙓ' + match[1])
-      .replaceAll(/Е[бпвмф]/gu, (match) => 'Ѣ' + match[1])
-      .replaceAll(/И[бпмф]/gu, (match) => 'Ꙑ' + match[1])
-      .replaceAll(/І[бпвмф]/gu, (match) => 'Ꙇ' + match[1])
-
-      .replaceAll(/є[бпвмф]/gu, (match) => 'ꙓ' + match[1])
-      .replaceAll(/е[бпвмф]/gu, (match) => 'ѣ' + match[1])
-      .replaceAll(/и[бпмф]/gu, (match) => 'ꙑ' + match[1])
-      .replaceAll(/і[бпвмф]/gu, (match) => 'ꙇ' + match[1])
+      .replaceAll(/є[бпвмф]/gu, (m) => 'ꙓ' + m[1])
+      .replaceAll(/е[бпвмф]/gu, (m) => 'ѣ' + m[1])
+      .replaceAll(/и[бпвмф]/gu, (m) => 'ꙑ' + m[1])
+      .replaceAll(/і[бпвмф]/gu, (m) => 'ꙇ' + m[1])
 
       .replaceAll('Тьо', 'ፔӏ')
       .replaceAll('тьо', 'ፔӏ')
@@ -294,8 +296,8 @@ export class TranslateService {
       .replaceAll('Ир', 'Ѵр')
       .replaceAll('ир', 'ѵр')
 
-      .replaceAll('Дво', 'Двꙭ ')
-      .replaceAll('дво', 'двꙭ ')
+      .replaceAll('Дво', 'Двꙫ')
+      .replaceAll('дво', 'двꙫ')
 
       .replaceAll('Окр', 'Ꚛкр')
       .replaceAll('окр', 'ꚛкр')
@@ -309,14 +311,14 @@ export class TranslateService {
       .replaceAll('Много', 'Мнꙮг')
       .replaceAll('много', 'мнꙮг')
 
-      .replaceAll('Ог', 'Ѻ')
-      .replaceAll('ог', 'ѻ')
+      .replaceAll('Ог', 'Ѻг')
+      .replaceAll('ог', 'ѻг')
 
-      .replaceAll('Оч', 'Ꙫ')
-      .replaceAll('оч', 'ꙫ')
+      .replaceAll('Очі', 'Ꙭчі')
+      .replaceAll('очі', 'ꙭчі')
 
-      .replaceAll('Ок', 'Ꙩ')
-      .replaceAll('ок', 'ꙩ')
+      .replaceAll('Око', 'Ꙩко')
+      .replaceAll('око', 'ꙩко')
 
       .replaceAll('Очо', 'Ꚙч')
       .replaceAll('очо', 'ꚙч')
@@ -396,12 +398,6 @@ export class TranslateService {
       .replaceAll('Зн', 'Ӡ')
       .replaceAll('зн', 'ӡ')
 
-      .replaceAll('Ар', 'Ьр')
-      .replaceAll('ар', 'ьр')
-
-      .replaceAll('Ат', 'Ꙏт')
-      .replaceAll('ат', 'ꙏт')
-
       .replaceAll('Яв', 'Ӛв')
       .replaceAll('яв', 'ӛв')
       .replaceAll('вя', 'вӛ')
@@ -421,11 +417,11 @@ export class TranslateService {
       .replaceAll('Ює', 'Ӫ')
       .replaceAll('ює', 'ӫ')
 
-      .replaceAll(/дд|тт|зз|сс|цц|лл|нн|жж|шш|рр|вв/gi, (m) => m[0] + '̃')
-      .replaceAll(/Дд|Тт|Зз|Сс|Цц|Лл|Нн|Жж|Шш|Рр|Вв/g, (m) => m[0] + '̃')
+      .replaceAll(/дд|тт|зз|сс|цц|лл|нн|жж|шш|рр|вв/giu, (m) => m[0] + '̃')
+      .replaceAll(/Дд|Тт|Зз|Сс|Цц|Лл|Нн|Жж|Шш|Рр|Вв/gu, (m) => m[0] + '̃')
 
-      .replaceAll(/Зв|Зг|Зд|Зр|Зс|Зт|Зх|Зц/g, (m) => m[1].toUpperCase() + '̌')
-      .replaceAll(/зв|зг|зд|зр|зс|зт|зх|зц/g, (m) => m[1] + '̌')
+      .replaceAll(/Зв|Зг|Зд|Зр|Зс|Зт|Зх|Зц/gu, (m) => m[1].toUpperCase() + '̌')
+      .replaceAll(/зв|зг|зд|зр|зс|зт|зх|зц/gu, (m) => m[1] + '̌')
 
       .replaceAll('Ао', 'А̊')
       .replaceAll('ао', 'а̊')
