@@ -3,20 +3,24 @@ import { TextDto } from '@shared/dto';
 import { ParseTextPipe } from '@shared/pipe';
 import { TranslateService } from '@shared/service';
 
-@Controller('translate')
+@Controller()
 export class SsrController {
   constructor(private readonly translateService: TranslateService) {}
 
-  @Post()
+  @Post('translate')
   @Render('translate/translate.ejs')
   async translate(@Body(ParseTextPipe) text: TextDto) {
     const translatedText = await this.translateService.translate(text);
     return { translatedText: translatedText.text, text: text.text };
   }
 
-  @Get()
+  @Get('translate')
   @Render('translate/translate.ejs')
   async renderTranslatePage() {
     return { translatedText: undefined, text: undefined };
   }
+
+  @Get('alphabet')
+  @Render('translate/alphabet.ejs')
+  async renderAlphabetPage() {}
 }

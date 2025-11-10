@@ -7,10 +7,7 @@ import { consonantLetters, finalSoftLetters } from './constants/cosntants';
 export class TranslateService {
   private async replace(str: string) {
     let res = str
-      .replaceAll(
-        /(б|п|в|м|ф|г|ж|ч|ш|к|х|г|ґ)[іяює]/giu,
-        (m) => m[0] + 'ҍ' + m[1],
-      )
+      .replaceAll(/(г|ж|ч|ш|к|х|г|ґ)[іяює]/giu, (m) => m[0] + 'ҍ' + m[1])
       .replaceAll(/дж[іяює]/giu, (m) => m[0] + m[1] + 'ҍ' + m[2])
 
       .replaceAll('Ае', 'Ӕ')
@@ -48,6 +45,9 @@ export class TranslateService {
 
       .replaceAll('Дз', 'Ꚉ')
       .replaceAll('дз', 'ꚉ')
+
+      .replaceAll('Йоу', 'І̵Ꙋ')
+      .replaceAll('йоу', 'І̵ꙋ ')
 
       .replaceAll('Оу', 'Ꙋ')
       .replaceAll('оу', 'ꙋ')
@@ -184,8 +184,10 @@ export class TranslateService {
       .replaceAll(/и[бпвмф]/gu, (m) => 'ꙑ' + m[1])
       .replaceAll(/і[бпвмф]/gu, (m) => 'ꙇ' + m[1])
 
-      .replaceAll('Тьо', 'ፔӏ')
-      .replaceAll('тьо', 'ፔӏ')
+      .replaceAll(/(б|п|в|м|ф)[ꙇяюꙓ]/giu, (m) => m[0] + 'ҍ' + m[1])
+
+      .replaceAll('Тьо', 'Ᲊӏ')
+      .replaceAll('тьо', 'ᲊӏ')
 
       .replaceAll('Дьо', 'Ԁӏ')
       .replaceAll('дьо', 'ԁӏ')
@@ -211,8 +213,8 @@ export class TranslateService {
       .replaceAll('Зь', 'Ԅ')
       .replaceAll('Дь', 'Ԃ')
 
-      .replaceAll('Ть', 'ፔ')
-      .replaceAll('ть', 'ፔ')
+      .replaceAll('Ть', 'Ᲊ')
+      .replaceAll('ть', 'ᲊ')
 
       .replaceAll('Ин', 'Ꙟ')
       .replaceAll('ин', 'ꙟ')

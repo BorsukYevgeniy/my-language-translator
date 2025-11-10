@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/translate/translate.css" />
-    <title>Translate to my language</title>
+    <title>Перекласти на мою мову</title>
   </head>
 
   <%- include('../partials/header.ejs') %>
   
   <body>
     <form action="/ssr/translate" method="post" class="form">
-      <label for="text">Text input:</label>
+      <label for="text">Введіть текст:</label>
       <textarea name="text" id="text"> <%= text || ''%> </textarea>
     
-      <button type="submit" id="submit">Translate</button>
+      <button type="submit" id="submit">Перекласти!</button>
     </form>
     <section class="translatedText">
       <% if (translatedText) { %>
