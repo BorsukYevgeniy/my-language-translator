@@ -5,7 +5,7 @@ import { consonantLetters, finalSoftLetters } from './constants/cosntants';
 
 @Injectable()
 export class TranslateService {
-  private async replace(str: string) {
+  private async replaceTo(str: string) {
     let res = str
       .replaceAll(/(г|ж|ч|ш|к|х|г|ґ)[іяює]/giu, (m) => m[0] + 'ҍ' + m[1])
       .replaceAll(/дж[іяює]/giu, (m) => m[0] + m[1] + 'ҍ' + m[2])
@@ -37,8 +37,8 @@ export class TranslateService {
       .replaceAll('Дзя', 'Ԇя')
       .replaceAll('дзя', 'ԇя')
 
-      .replaceAll('Дзі', 'Ԇі')
-      .replaceAll('дзі', 'ԇі')
+      .replaceAll('Дзі', 'Ԇї')
+      .replaceAll('дзі', 'ԇї')
 
       .replaceAll('Дзв', 'ꚃ')
       .replaceAll('дзв', 'ꚃ')
@@ -47,7 +47,7 @@ export class TranslateService {
       .replaceAll('дз', 'ꚉ')
 
       .replaceAll('Йоу', 'І̵Ꙋ')
-      .replaceAll('йоу', 'І̵ꙋ ')
+      .replaceAll('йоу', 'І̵ꙋ')
 
       .replaceAll('Оу', 'Ꙋ')
       .replaceAll('оу', 'ꙋ')
@@ -67,6 +67,24 @@ export class TranslateService {
       .replaceAll('Іо', 'Ҩ')
       .replaceAll('іо', 'ҩ')
 
+      .replaceAll('Льо', 'Љӏ')
+      .replaceAll('льо', 'љӏ')
+
+      .replaceAll('Ньо', 'Њӏ')
+      .replaceAll('ньо', 'њӏ')
+
+      .replaceAll('Тьо', 'Ᲊӏ')
+      .replaceAll('тьо', 'ᲊӏ')
+
+      .replaceAll('Дьо', 'Ԁӏ')
+      .replaceAll('дьо', 'ԁӏ')
+
+      .replaceAll('Цьо', 'Ꙡӏ')
+      .replaceAll('цьо', 'ꙡӏ')
+
+      .replaceAll('ьо', 'ӏ')
+
+      .replaceAll(/[дтзсцлнДТЗСЦЛН]і/gu, (m) => m[0] + 'ї')
       .replaceAll('Ан', 'Ѧ')
       .replaceAll('ан', 'ѧ')
 
@@ -87,12 +105,6 @@ export class TranslateService {
 
       .replaceAll('Ін', 'Ꙛ')
       .replaceAll('ін', 'ꙛ')
-
-      .replaceAll('Льо', 'Љӏ')
-      .replaceAll('льо', 'љӏ')
-
-      .replaceAll('Ньо', 'Њӏ')
-      .replaceAll('ньо', 'њӏ')
 
       .replaceAll('Ль', 'Љ')
       .replaceAll('ль', 'љ')
@@ -186,28 +198,8 @@ export class TranslateService {
 
       .replaceAll(/(б|п|в|м|ф)[ꙇяюꙓ]/giu, (m) => m[0] + 'ҍ' + m[1])
 
-      .replaceAll('Тьо', 'Ᲊӏ')
-      .replaceAll('тьо', 'ᲊӏ')
-
-      .replaceAll('Дьо', 'Ԁӏ')
-      .replaceAll('дьо', 'ԁӏ')
-
-      .replaceAll('Зьо', 'Зӏ')
-      .replaceAll('зьо', 'зӏ')
-
-      .replaceAll('Сьо', 'Сӏ')
-      .replaceAll('сьо', 'сӏ')
-
-      .replaceAll('Цьо', 'Ꙡӏ')
-      .replaceAll('цьо', 'ꙡӏ')
-
-      .replaceAll('Рьо', 'Рӏ')
-      .replaceAll('рьо', 'рӏ')
-
-      .replaceAll('ьо', 'ӏ')
-
-      .replaceAll('Ді', 'Ԁ')
-      .replaceAll('ді', 'ԁ')
+      .replaceAll('Ді', 'Ԁї')
+      .replaceAll('ді', 'ԁї')
 
       .replaceAll('Сь', 'Ԍ')
       .replaceAll('Зь', 'Ԅ')
@@ -219,7 +211,7 @@ export class TranslateService {
       .replaceAll('Ин', 'Ꙟ')
       .replaceAll('ин', 'ꙟ')
 
-      .replaceAll('Ува', 'Ўә ')
+      .replaceAll('Ува', 'Ўә')
       .replaceAll('ува', 'ўә')
 
       .replaceAll('Шва', 'Ꚗә')
@@ -419,22 +411,72 @@ export class TranslateService {
       .replaceAll('Ює', 'Ӫ')
       .replaceAll('ює', 'ӫ')
 
-      .replaceAll(/дд|тт|зз|сс|цц|лл|нн|жж|шш|рр|вв/giu, (m) => m[0] + '̃')
+      .replaceAll(/дд|тт|зз|сс|цц|лл|нн|жж|шш|рр|вв/gu, (m) => m[0] + '̃')
       .replaceAll(/Дд|Тт|Зз|Сс|Цц|Лл|Нн|Жж|Шш|Рр|Вв/gu, (m) => m[0] + '̃')
 
       .replaceAll(/Зв|Зг|Зд|Зр|Зс|Зт|Зх|Зц/gu, (m) => m[1].toUpperCase() + '̌')
       .replaceAll(/зв|зг|зд|зр|зс|зт|зх|зц/gu, (m) => m[1] + '̌')
 
+      .replaceAll(/(д|з|ц|р|Д|З|Ц|Р)[їяює]/gu, (m) => m[0] + 'ь' + m[1])
+
+      .replaceAll(/С[їяює]/gu, (m) => 'Ԍ' + m[1])
+      .replaceAll(/с[їяює]/gu, (m) => 'ԍ' + m[1])
+
+      .replaceAll(/Т[їяює]/gu, (m) => 'Ᲊ' + m[1])
+      .replaceAll(/т[їяює]/gu, (m) => 'ᲊ' + m[1])
+
+      .replaceAll(/Л[їяює]/gu, (m) => 'Љ' + m[1])
+      .replaceAll(/л[їяює]/gu, (m) => 'љ' + m[1])
+
+      .replaceAll(/Н[їяює]/gu, (m) => 'Њ' + m[1])
+      .replaceAll(/н[їяює]/gu, (m) => 'њ' + m[1])
+
       .replaceAll('Ао', 'А̊')
       .replaceAll('ао', 'а̊')
 
       .replaceAll('Уо', 'У̊')
-      .replaceAll('уо', 'у̊');
+      .replaceAll('уо', 'у̊')
+
+      .replaceAll('Гр', 'Ӻ')
+      .replaceAll('гр', 'ӻ')
+
+      .replaceAll('Гн', 'Ғ')
+      .replaceAll('гн', 'ғ')
+
+      .replaceAll('Гб', 'Ҕ')
+      .replaceAll('гб', 'ҕ')
+
+      .replaceAll('Гл', 'Ғ̌')
+      .replaceAll('гл', 'ғ̌')
+
+      .replaceAll('Вг', 'Г̑')
+      .replaceAll('вг', 'г̑')
+
+      .replaceAll('Гв', 'Г̆')
+      .replaceAll('гв', 'г̆')
+
+      .replaceAll('Кр', 'Ԟ')
+      .replaceAll('кр', 'ԟ')
+
+      .replaceAll('Кн', 'Ҡ')
+      .replaceAll('кн', 'ҡ')
+
+      .replaceAll('Кв', 'К̆')
+      .replaceAll('кв', 'к̆')
+
+      .replaceAll('Вк', 'К̑')
+      .replaceAll('вк', 'к̑')
+
+      .replaceAll('Кл', 'Ҟ')
+      .replaceAll('кл', 'ҟ')
+
+      .replaceAll('Кб', 'Ӄ')
+      .replaceAll('кб', 'ӄ');
 
     return res;
   }
 
-  private async endOfWord(str: string): Promise<string> {
+  private async endOfWordTo(str: string): Promise<string> {
     const res = str
       .replaceAll(',', ' , ')
       .replaceAll('.', ' . ')
@@ -497,8 +539,8 @@ export class TranslateService {
       .replaceAll(' - ', '-');
   }
 
-  async translate(textDto: TextDto): Promise<TextDto> {
-    const res = await this.replace(await this.endOfWord(textDto.text));
+  async translateTo(textDto: TextDto): Promise<TextDto> {
+    const res = await this.replaceTo(await this.endOfWordTo(textDto.text));
     return new TextDto(res);
   }
 }

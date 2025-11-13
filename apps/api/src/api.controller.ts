@@ -10,6 +10,6 @@ export class ApiController {
   @Post('translate')
   @HttpCode(HttpStatus.OK)
   async getHello(@Body(ParseTextPipe) text: TextDto): Promise<TextDto> {
-    return await this.translateService.translate(text);
+    return await this.translateService.translateTo(text);
   }
 }

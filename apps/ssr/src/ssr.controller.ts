@@ -10,7 +10,7 @@ export class SsrController {
   @Post('translate')
   @Render('translate/translate.ejs')
   async translate(@Body(ParseTextPipe) text: TextDto) {
-    const translatedText = await this.translateService.translate(text);
+    const translatedText = await this.translateService.translateTo(text);
     return { translatedText: translatedText.text, text: text.text };
   }
 
