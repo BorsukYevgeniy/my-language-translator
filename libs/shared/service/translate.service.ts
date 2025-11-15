@@ -6,10 +6,11 @@ import { consonantLetters, finalSoftLetters } from './constants/cosntants';
 @Injectable()
 export class TranslateService {
   private async replaceTo(str: string) {
-    let res = str
-
-      .replaceAll(/(ж|ч|ш|к|х|г|ґ)[іяює]/giu, (m) => m[0] + 'ҍ' + m[1])
-      .replaceAll(/дж[іяює]/giu, (m) => m[0] + m[1] + 'ҍ' + m[2])
+    return str
+      .replaceAll(
+        /(ж|ч|ш|к|х|г|ґ|Ж|Ч|Ш|К|Х|Г|Ґ)[іяює]/gu,
+        (m) => m[0] + 'ҍ' + m[1],
+      )
 
       .replaceAll('Ае', 'Ӕ')
       .replaceAll('ае', 'ӕ')
@@ -479,9 +480,28 @@ export class TranslateService {
       .replaceAll('кл', 'ҟ')
 
       .replaceAll('Кб', 'Ӄ')
-      .replaceAll('кб', 'ӄ');
+      .replaceAll('Кб', 'Ӄ')
 
-    return res;
+      .replaceAll('Уе', 'Ү')
+      .replaceAll('уе', 'ү')
+      .replaceAll('Ує', 'Ұ')
+      .replaceAll('ує', 'ұ')
+      .replaceAll('Зд', 'Ԑ')
+      .replaceAll('зд', 'ԑ')
+      .replaceAll('Нч', 'Ӈ')
+      .replaceAll('нч', 'ӈ')
+      .replaceAll('Чн', 'Ԩ')
+      .replaceAll('чн', 'ԩ')
+
+      .replaceAll(/[жшЖШ]ыю/gu, (m) => m[0] + 'ӹ')
+
+      .replaceAll('Вл', 'Ԝ')
+      .replaceAll('вл', 'ԝ')
+
+      .replaceAll('Уа', 'Ӳ')
+      .replaceAll('уа', 'ӳ')
+
+      .replaceAll(/ь[яюєїі]/gu, (m) => m[0] + 'ˮ' + m[1]);
   }
 
   private async endOfWordTo(str: string): Promise<string> {

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Charis7000;
+  src: url('../../font/Charis-Regular.ttf');
+}
+
+* {
+  font-family: Charis7000;
+}

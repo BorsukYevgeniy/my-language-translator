@@ -23,4 +23,8 @@ export class SsrController {
   @Get('alphabet')
   @Render('translate/alphabet.ejs')
   async renderAlphabetPage() {}
+
+  @Get('rules')
+  @Render('translate/rules.ejs')
+  async renderRulesPage() {}
 }
