@@ -1,19 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Алфавіт</title>
-    <link rel="stylesheet" href="/css/translate/alphabet.css" />
+    <link rel="stylesheet" href="./css/alphabet.css" />
+    <link rel="stylesheet" href="./css/header.css" />
   </head>
 
-  <%- include('../partials/header.ejs')%>
+  <header class="header">
+    <nav class="nav">
+      <a href="" class="home">Головна сторінка</a>
+
+      <a href="/translate">Перекладач</a>
+      <a href="/alphabet">Алфавіт</a>
+      <a href="/rules">Правила</a>
+    </nav>
+  </header>
 
   <body>
     <br /><br /><br />
     <h1>Алфавіт</h1>
     <div id="alphabet">
-      1. А а (А) 2. А̊  а̊ (Ао) 3. А̄ а̄ (А подовжене) 4. Ӓ̄ ӓ̄ (Ая) 5. Ꙗ ꙗ (А
+      1. А а (А) 2. А̊ а̊ (Ао) 3. А̄ а̄ (А подовжене) 4. Ӓ̄ ӓ̄ (Ая) 5. Ꙗ ꙗ (А
       йотоване) 6. Ӕ ӕ (Ае) 7. Ә ә (Шва) 8. Ӛ ӛ (Шва м'яке) 9. Ә̄ ә̄ (Шва
       подовжене) 10. Б б (Бе) 11. В в (Ве) 12. В̌ в̌ (Зве) 13. В̃ в̃ (Ве подовжене)
       14. Ԝ ԝ (Вла) 15. Г г (Ге) 16. Г̌ г̌ (Зге) 17. Г̑ г̑ (Вге) 18. Г̆ г̆ (Гве) 19. Ғ
