@@ -138,10 +138,11 @@ function replaceTo(str) {
 
     .replaceAll('Дї', 'Ԁї')
     .replaceAll('дї', 'ԁї')
-
+    
     .replaceAll('Дії', 'Ԁї')
     .replaceAll('дії', 'ԁї')
-
+    
+    .replaceAll(/ь[яюєїі]/gu, (m) => m[0] + 'ˮ' + m[1])
     .replaceAll(/[тзсцлнТЗСЦЛН]і/gu, (m) => m[0] + 'ї')
 
     .replaceAll('Ан', 'Ѧ')
@@ -548,7 +549,6 @@ function replaceTo(str) {
     .replaceAll('Уа', 'Ӳ')
     .replaceAll('уа', 'ӳ')
 
-    .replaceAll(/ь[яюєїі]/gu, (m) => m[0] + 'ˮ' + m[1]);
 }
 
 function endOfWordTo(str) {
@@ -625,6 +625,6 @@ document.getElementById('submit').addEventListener('click', (e) => {
   const translatedTextDiv = document.getElementById('translatedText')
 
   const text = translateTo(textArea.value)
-  
+
   translatedTextDiv.innerText = text
 })  
