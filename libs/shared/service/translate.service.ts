@@ -7,7 +7,8 @@ import { consonantLetters, finalSoftLetters } from './constants/cosntants';
 export class TranslateService {
   private async replaceTo(str: string) {
     let res = str
-      .replaceAll(/(г|ж|ч|ш|к|х|г|ґ)[іяює]/giu, (m) => m[0] + 'ҍ' + m[1])
+
+      .replaceAll(/(ж|ч|ш|к|х|г|ґ)[іяює]/giu, (m) => m[0] + 'ҍ' + m[1])
       .replaceAll(/дж[іяює]/giu, (m) => m[0] + m[1] + 'ҍ' + m[2])
 
       .replaceAll('Ае', 'Ӕ')
@@ -84,7 +85,17 @@ export class TranslateService {
 
       .replaceAll('ьо', 'ӏ')
 
-      .replaceAll(/[дтзсцлнДТЗСЦЛН]і/gu, (m) => m[0] + 'ї')
+      .replaceAll('Ді', 'Ԁї')
+      .replaceAll('ді', 'ԁї')
+
+      .replaceAll('Дї', 'Ԁї')
+      .replaceAll('дї', 'ԁї')
+
+      .replaceAll('Дії', 'Ԁї')
+      .replaceAll('дії', 'ԁї')
+
+      .replaceAll(/[тзсцлнТЗСЦЛН]і/gu, (m) => m[0] + 'ї')
+
       .replaceAll('Ан', 'Ѧ')
       .replaceAll('ан', 'ѧ')
 
@@ -198,9 +209,6 @@ export class TranslateService {
 
       .replaceAll(/(б|п|в|м|ф)[ꙇяюꙓ]/giu, (m) => m[0] + 'ҍ' + m[1])
 
-      .replaceAll('Ді', 'Ԁї')
-      .replaceAll('ді', 'ԁї')
-
       .replaceAll('Сь', 'Ԍ')
       .replaceAll('Зь', 'Ԅ')
       .replaceAll('Дь', 'Ԃ')
@@ -246,9 +254,6 @@ export class TranslateService {
       .replaceAll('Чь', 'Ћь')
       .replaceAll('чь', 'ћь')
 
-      .replaceAll('Обоє', 'Ꙭбє')
-      .replaceAll('обоє', 'ꙭбє')
-
       .replaceAll('Оє', 'Ө')
       .replaceAll('оє', 'ө')
 
@@ -293,6 +298,9 @@ export class TranslateService {
       .replaceAll('Дво', 'Двꙫ')
       .replaceAll('дво', 'двꙫ')
 
+      .replaceAll('Обө', 'Ꙫбє')
+      .replaceAll('обө', 'ꙫбє')
+
       .replaceAll('Окр', 'Ꚛкр')
       .replaceAll('окр', 'ꚛкр')
 
@@ -308,14 +316,14 @@ export class TranslateService {
       .replaceAll('Ог', 'Ѻг')
       .replaceAll('ог', 'ѻг')
 
-      .replaceAll('Очі', 'Ꙭчі')
-      .replaceAll('очі', 'ꙭчі')
-
       .replaceAll('Око', 'Ꙩко')
       .replaceAll('око', 'ꙩко')
 
       .replaceAll('Очо', 'Ꚙч')
       .replaceAll('очо', 'ꚙч')
+
+      .replaceAll(/Очҍі[ ,-:;]/gu, (m) => 'Ꙭ' + m[1] + m[2] + m[3] + m[4])
+      .replaceAll(/очҍі[ ,-:;]/gu, (m) => 'ꙭ' + m[1] + m[2] + m[3] + m[4])
 
       .replaceAll('Оі', 'Ꙕ')
       .replaceAll('оі', 'ꙕ')
